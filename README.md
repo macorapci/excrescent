@@ -3,15 +3,37 @@ This is a service that gives you fake websocket service.
 I am using VPN which won't close the connection when ws connection is open on local. 
 This is why I needed such a fake web socket so that the vpn connection would not close automatically.
 
-## Create Websocket
+## Download Dependency
 
-### Download Websocat for Ubuntu
+<details>
+<summary>Ubuntu</summary>
 
 ````console
 sudo wget -qO /usr/local/bin/websocat https://github.com/vi/websocat/releases/latest/download/websocat.x86_64-unknown-linux-musl
+````
+
+````console
 sudo chmod a+x /usr/local/bin/websocat
+````
+
+````console
 websocat --version
 ````
+</details>
+
+<details>
+<summary>Macos</summary>
+
+````console
+brew install websocat
+````
+
+````console
+brew install coreutils
+````
+coreutils for `timeout` command.
+
+</details>
 
 ### Create Bash File
 
